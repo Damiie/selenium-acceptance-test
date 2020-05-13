@@ -21,7 +21,7 @@ And user click Login
 Then My account dashboard is displayed
 Examples:
 | Email                   | Password |
-| devondash01@outlook.com | Monday01 |
+| devondash01@outlook.com | Tuesday |
 
 Scenario Outline: Account Login-Error message displayed when Unregistered customer attempts login
 Given user on Login page
