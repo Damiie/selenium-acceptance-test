@@ -113,7 +113,7 @@ formatter.match({
   "location": "AccountManagementSteps.lumaApplicationIsLaunched()"
 });
 formatter.result({
-  "duration": 11748396103,
+  "duration": 13303831180,
   "status": "passed"
 });
 formatter.scenario({
@@ -193,7 +193,7 @@ formatter.match({
   "location": "AccountManagementSteps.userOnCreateAnAccountPage()"
 });
 formatter.result({
-  "duration": 1786256323,
+  "duration": 845576492,
   "status": "passed"
 });
 formatter.match({
@@ -206,7 +206,7 @@ formatter.match({
   "location": "AccountManagementSteps.userEnter(String)"
 });
 formatter.result({
-  "duration": 1232082888,
+  "duration": 356771978,
   "status": "passed"
 });
 formatter.match({
@@ -219,7 +219,7 @@ formatter.match({
   "location": "AccountManagementSteps.userEnters(String)"
 });
 formatter.result({
-  "duration": 305761497,
+  "duration": 141815617,
   "status": "passed"
 });
 formatter.match({
@@ -232,7 +232,7 @@ formatter.match({
   "location": "AccountManagementSteps.userEnterTheir(String)"
 });
 formatter.result({
-  "duration": 544503730,
+  "duration": 140122182,
   "status": "passed"
 });
 formatter.match({
@@ -245,7 +245,7 @@ formatter.match({
   "location": "AccountManagementSteps.userEntersTheir(String)"
 });
 formatter.result({
-  "duration": 393764548,
+  "duration": 231580486,
   "status": "passed"
 });
 formatter.match({
@@ -258,200 +258,21 @@ formatter.match({
   "location": "AccountManagementSteps.usersEnter(String)"
 });
 formatter.result({
-  "duration": 274297250,
+  "duration": 446563815,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.userClickCreateAnAccount()"
 });
 formatter.result({
-  "duration": 1979712663,
+  "duration": 626968694,
   "status": "passed"
 });
 formatter.match({
   "location": "AccountManagementSteps.accountDashboardIsDisplayed()"
 });
 formatter.result({
-  "duration": 59562,
-  "status": "passed"
-});
-formatter.scenarioOutline({
-  "line": 22,
-  "name": "Account Login- Registered customer can login",
-  "description": "",
-  "id": "account-management;account-login--registered-customer-can-login",
-  "type": "scenario_outline",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 21,
-      "name": "@login"
-    }
-  ]
-});
-formatter.step({
-  "line": 23,
-  "name": "user on login page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "user enter \"\u003cEmail\u003e\" on login page",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 25,
-  "name": "user enters \"\u003cPassword\u003e\" on login page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "user click Login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "My account dashboard is displayed",
-  "keyword": "Then "
-});
-formatter.examples({
-  "line": 28,
-  "name": "",
-  "description": "",
-  "id": "account-management;account-login--registered-customer-can-login;",
-  "rows": [
-    {
-      "cells": [
-        "Email",
-        "Password"
-      ],
-      "line": 29,
-      "id": "account-management;account-login--registered-customer-can-login;;1"
-    },
-    {
-      "cells": [
-        "devondash01@yahoo.co.uk",
-        "Monday01"
-      ],
-      "line": 30,
-      "id": "account-management;account-login--registered-customer-can-login;;2"
-    }
-  ],
-  "keyword": "Examples"
-});
-formatter.background({
-  "line": 4,
-  "name": "",
-  "description": "",
-  "type": "background",
-  "keyword": "Background"
-});
-formatter.step({
-  "line": 5,
-  "name": "luma application is launched",
-  "keyword": "Given "
-});
-formatter.match({
-  "location": "AccountManagementSteps.lumaApplicationIsLaunched()"
-});
-formatter.result({
-  "duration": 5836917261,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 30,
-  "name": "Account Login- Registered customer can login",
-  "description": "",
-  "id": "account-management;account-login--registered-customer-can-login;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline",
-  "tags": [
-    {
-      "line": 1,
-      "name": "@accountManagement"
-    },
-    {
-      "line": 21,
-      "name": "@login"
-    }
-  ]
-});
-formatter.step({
-  "line": 23,
-  "name": "user on login page",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "user enter \"devondash01@yahoo.co.uk\" on login page",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 25,
-  "name": "user enters \"Monday01\" on login page",
-  "matchedColumns": [
-    1
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 26,
-  "name": "user click Login",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 27,
-  "name": "My account dashboard is displayed",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "AccountManagementSteps.userOnLoginPage()"
-});
-formatter.result({
-  "duration": 1754749401,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "devondash01@yahoo.co.uk",
-      "offset": 12
-    }
-  ],
-  "location": "AccountManagementSteps.userEnterOnLoginPage(String)"
-});
-formatter.result({
-  "duration": 1307007961,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Monday01",
-      "offset": 13
-    }
-  ],
-  "location": "AccountManagementSteps.userEntersOnLoginPage(String)"
-});
-formatter.result({
-  "duration": 209268555,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AccountManagementSteps.userClickLogin()"
-});
-formatter.result({
-  "duration": 1576723077,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AccountManagementSteps.myAccountDashboardIsDisplayed()"
-});
-formatter.result({
-  "duration": 60873,
+  "duration": 70308,
   "status": "passed"
 });
 });

@@ -9,17 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(features = "src/test/resources/Feature",
         glue = {"com.lamtech.luma.stepDefinition"},
         format = {"pretty","html:target/site/cucumber-pretty"},
-        tags = {"@accountManagement"}
+        tags = {"@createAccount"}
+
 )
 
 
 public class TestRunner {
-
-
-
-
-
-
 
 
 

@@ -16,12 +16,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AccountManagementSteps {
     WebDriver driver;
+    //CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
 
     @Given("^luma application is launched$")
     public void lumaApplicationIsLaunched() {
-        // Use Chrome broswer
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        // Use Firefox broswer
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
         driver.get("http://demo-magento2.vuestorefront.io/");
     }
 
@@ -120,6 +121,5 @@ public class AccountManagementSteps {
     public void myAccountDashboardIsDisplayed() throws Throwable {
         //driver.close();
     }
-
 
 }

@@ -32,6 +32,7 @@ public class LoginPagePO {
     public void enterPassword(String Password){
         passwordField.sendKeys(Password);
     }
+
     public void clickSignInButton(){
         SignInButton.click();
     }
