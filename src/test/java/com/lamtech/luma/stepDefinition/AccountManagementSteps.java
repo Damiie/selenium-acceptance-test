@@ -21,8 +21,8 @@ public class AccountManagementSteps {
     @Given("^luma application is launched$")
     public void lumaApplicationIsLaunched() {
         // Use Firefox broswer
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+        //WebDriverManager.firefoxdriver().setup();
+        //driver = new FirefoxDriver();
         driver.get("http://demo-magento2.vuestorefront.io/");
     }
 

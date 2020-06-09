@@ -1,98 +1,89 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("AccountManagement.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("CustomerManagement.feature");
 formatter.feature({
   "line": 2,
-  "name": "Account Management",
+  "name": "Customer Management",
   "description": "",
-  "id": "account-management",
+  "id": "customer-management",
   "keyword": "Feature",
   "tags": [
     {
       "line": 1,
-      "name": "@accountManagement"
+      "name": "@customerManagement"
     }
   ]
 });
 formatter.scenarioOutline({
   "line": 8,
-  "name": "Create an account with a valid email",
+  "name": "Change password",
   "description": "",
-  "id": "account-management;create-an-account-with-a-valid-email",
+  "id": "customer-management;change-password",
   "type": "scenario_outline",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 7,
-      "name": "@createAccount"
+      "name": "@changePassword"
     }
   ]
 });
 formatter.step({
   "line": 9,
-  "name": "user on create an account page",
+  "name": "user on Edit Account information page",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "user enter \"\u003cFirstname\u003e\"",
+  "name": "user click on change password",
   "keyword": "When "
 });
 formatter.step({
   "line": 11,
-  "name": "user enters \"\u003cLastname\u003e\"",
+  "name": "user enter  \"\u003cCurrentpassword\u003e\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "user enter their \"\u003cEmail\u003e\"",
+  "name": "user enters \"\u003cNewpassword\u003e\" on edit account information page",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "user enters their \"\u003cPassword\u003e\"",
+  "name": "users enter their \"\u003cConfirmNewpassword\u003e\"",
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
-  "name": "users enter \"\u003cConfirmpassword\u003e\"",
+  "name": "user click save",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "user click create an account",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 16,
-  "name": "account dashboard is displayed",
+  "name": "Account Dashboard should displayed with validation message \"You saved the account information\"",
   "keyword": "Then "
 });
 formatter.examples({
   "line": 17,
   "name": "",
   "description": "",
-  "id": "account-management;create-an-account-with-a-valid-email;",
+  "id": "customer-management;change-password;",
   "rows": [
     {
       "cells": [
-        "Firstname",
-        "Lastname",
-        "Email",
-        "Password",
-        "Confirmpassword"
+        "Currentpassword",
+        "Newpassword",
+        "ConfirmNewpassword"
       ],
       "line": 18,
-      "id": "account-management;create-an-account-with-a-valid-email;;1"
+      "id": "customer-management;change-password;;1"
     },
     {
       "cells": [
-        "lilian",
-        "Farner",
-        "Lilian.farner01@yahoo.com",
+        "Monday02",
         "Monday03",
         "Monday03"
       ],
       "line": 19,
-      "id": "account-management;create-an-account-with-a-valid-email;;2"
+      "id": "customer-management;change-password;;2"
     }
   ],
   "keyword": "Examples"
@@ -113,127 +104,107 @@ formatter.match({
   "location": "AccountManagementSteps.lumaApplicationIsLaunched()"
 });
 formatter.result({
-  "duration": 13303831180,
-  "status": "passed"
+  "duration": 1175981195,
+  "error_message": "java.lang.NullPointerException\n\tat com.lamtech.luma.stepDefinition.AccountManagementSteps.lumaApplicationIsLaunched(AccountManagementSteps.java:26)\n\tat ✽.Given luma application is launched(CustomerManagement.feature:5)\n",
+  "status": "failed"
 });
 formatter.scenario({
   "line": 19,
-  "name": "Create an account with a valid email",
+  "name": "Change password",
   "description": "",
-  "id": "account-management;create-an-account-with-a-valid-email;;2",
+  "id": "customer-management;change-password;;2",
   "type": "scenario",
   "keyword": "Scenario Outline",
   "tags": [
     {
       "line": 1,
-      "name": "@accountManagement"
+      "name": "@customerManagement"
     },
     {
       "line": 7,
-      "name": "@createAccount"
+      "name": "@changePassword"
     }
   ]
 });
 formatter.step({
   "line": 9,
-  "name": "user on create an account page",
+  "name": "user on Edit Account information page",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "user enter \"lilian\"",
-  "matchedColumns": [
-    0
-  ],
+  "name": "user click on change password",
   "keyword": "When "
 });
 formatter.step({
   "line": 11,
-  "name": "user enters \"Farner\"",
+  "name": "user enter  \"Monday02\"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "user enters \"Monday03\" on edit account information page",
   "matchedColumns": [
     1
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
-  "name": "user enter their \"Lilian.farner01@yahoo.com\"",
+  "line": 13,
+  "name": "users enter their \"Monday03\"",
   "matchedColumns": [
     2
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
-  "name": "user enters their \"Monday03\"",
-  "matchedColumns": [
-    3
-  ],
-  "keyword": "And "
-});
-formatter.step({
   "line": 14,
-  "name": "users enter \"Monday03\"",
-  "matchedColumns": [
-    4
-  ],
+  "name": "user click save",
   "keyword": "And "
 });
 formatter.step({
   "line": 15,
-  "name": "user click create an account",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 16,
-  "name": "account dashboard is displayed",
+  "name": "Account Dashboard should displayed with validation message \"You saved the account information\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "AccountManagementSteps.userOnCreateAnAccountPage()"
+  "location": "CustomerManagementSteps.userOnEditAccountInformationPage()"
 });
 formatter.result({
-  "duration": 845576492,
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "CustomerManagementSteps.userClickOnChangePassword()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "lilian",
-      "offset": 12
-    }
-  ],
-  "location": "AccountManagementSteps.userEnter(String)"
-});
-formatter.result({
-  "duration": 356771978,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Farner",
+      "val": "Monday02",
       "offset": 13
     }
   ],
-  "location": "AccountManagementSteps.userEnters(String)"
+  "location": "CustomerManagementSteps.userEnter(String)"
 });
 formatter.result({
-  "duration": 141815617,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Lilian.farner01@yahoo.com",
-      "offset": 18
+      "val": "Monday03",
+      "offset": 13
     }
   ],
-  "location": "AccountManagementSteps.userEnterTheir(String)"
+  "location": "CustomerManagementSteps.userEntersOnEditAccountInformationPage(String)"
 });
 formatter.result({
-  "duration": 140122182,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -242,37 +213,27 @@ formatter.match({
       "offset": 19
     }
   ],
-  "location": "AccountManagementSteps.userEntersTheir(String)"
+  "location": "CustomerManagementSteps.usersEnterTheir(String)"
 });
 formatter.result({
-  "duration": 231580486,
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "CustomerManagementSteps.userClickSave()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Monday03",
-      "offset": 13
+      "val": "You saved the account information",
+      "offset": 60
     }
   ],
-  "location": "AccountManagementSteps.usersEnter(String)"
+  "location": "CustomerManagementSteps.accountDashboardShouldDisplayedWithValidationMessage(String)"
 });
 formatter.result({
-  "duration": 446563815,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AccountManagementSteps.userClickCreateAnAccount()"
-});
-formatter.result({
-  "duration": 626968694,
-  "status": "passed"
-});
-formatter.match({
-  "location": "AccountManagementSteps.accountDashboardIsDisplayed()"
-});
-formatter.result({
-  "duration": 70308,
-  "status": "passed"
+  "status": "skipped"
 });
 });
