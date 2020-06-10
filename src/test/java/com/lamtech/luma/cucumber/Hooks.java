@@ -6,6 +6,7 @@ import cucumber.api.java.Before;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Hooks {
@@ -14,9 +15,9 @@ public class Hooks {
 
     @Before
     public void beforeScenario() {
-           // Use Firefox broswer
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+           // Use Chrome broswer
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.get("http://demo-magento2.vuestorefront.io/");
     }
 

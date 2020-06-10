@@ -46,7 +46,7 @@ public class CustomerManagementSteps {
         //driver.findElement(By.id("password")).sendKeys(Newpassword);
 
         EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
-        editAccountInformationPagePO.enterCurrentPassword(Newpassword);
+        editAccountInformationPagePO.enterNewPassword(Newpassword);
     }
 
     @And("^users enter their \"([^\"]*)\"$")
@@ -61,8 +61,8 @@ public class CustomerManagementSteps {
     public void userClickSave() {
         //driver.findElement(By.cssSelector(".save > span:nth-child(1)")).click();
 
-        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
-        editAccountInformationPagePO.clickSaveButton();
+       EditAccountInformationPagePO editAccountInformationPagePO= new EditAccountInformationPagePO(driver);
+       editAccountInformationPagePO.clickSaveButton();
 
     }
 

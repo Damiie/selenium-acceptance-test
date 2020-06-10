@@ -24,7 +24,7 @@ public class EditAccountInformationPagePO {
     @FindBy(id = "password-confirmation")
     public static WebElement passwordConfirmationField;
 
-    @FindBy(css = ".save > span:nth-child(1)")
+    @FindBy( css = ".save > span:nth-child(1)")
     public static WebElement saveButton;
 
     //Initialised Elements
@@ -47,9 +47,9 @@ public class EditAccountInformationPagePO {
     public  void enterPasswordConfirmation(String ConfirmNewpassword){
         passwordConfirmationField.sendKeys(ConfirmNewpassword);
     }
-
-    public void clickSaveButton(){clickSaveButton();}
-
+    public void clickSaveButton(){
+        saveButton.click();
+    }
 
     }
 
