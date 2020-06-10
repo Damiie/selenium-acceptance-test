@@ -28,41 +28,61 @@ formatter.scenarioOutline({
 });
 formatter.step({
   "line": 9,
-  "name": "user on Edit Account information page",
+  "name": "user on login page",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "user click on change password",
+  "name": "user enter \"\u003cEmail\u003e\" on login page",
   "keyword": "When "
 });
 formatter.step({
   "line": 11,
-  "name": "user enter  \"\u003cCurrentpassword\u003e\"",
+  "name": "user enters \"\u003cPassword\u003e\" on login page",
   "keyword": "And "
 });
 formatter.step({
   "line": 12,
-  "name": "user enters \"\u003cNewpassword\u003e\" on edit account information page",
+  "name": "user click Login",
   "keyword": "And "
 });
 formatter.step({
   "line": 13,
-  "name": "users enter their \"\u003cConfirmNewpassword\u003e\"",
+  "name": "user on Edit Account information page",
   "keyword": "And "
 });
 formatter.step({
   "line": 14,
+  "name": "user click on change password",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "user enter  \"\u003cCurrentpassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 16,
+  "name": "user enters \"\u003cNewpassword\u003e\" on edit account information page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "users enter their \"\u003cConfirmNewpassword\u003e\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 18,
   "name": "user click save",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 19,
   "name": "Account Dashboard should displayed with validation message \"You saved the account information\"",
   "keyword": "Then "
 });
 formatter.examples({
-  "line": 17,
+  "line": 21,
   "name": "",
   "description": "",
   "id": "customer-management;change-password;",
@@ -71,18 +91,22 @@ formatter.examples({
       "cells": [
         "Currentpassword",
         "Newpassword",
-        "ConfirmNewpassword"
+        "ConfirmNewpassword",
+        "Email",
+        "Password"
       ],
-      "line": 18,
+      "line": 22,
       "id": "customer-management;change-password;;1"
     },
     {
       "cells": [
         "Monday02",
         "Monday03",
-        "Monday03"
+        "Monday03",
+        "devondash01@yahoo.co.uk",
+        "Monday02"
       ],
-      "line": 19,
+      "line": 23,
       "id": "customer-management;change-password;;2"
     }
   ],
@@ -104,12 +128,11 @@ formatter.match({
   "location": "AccountManagementSteps.lumaApplicationIsLaunched()"
 });
 formatter.result({
-  "duration": 1175981195,
-  "error_message": "java.lang.NullPointerException\n\tat com.lamtech.luma.stepDefinition.AccountManagementSteps.lumaApplicationIsLaunched(AccountManagementSteps.java:26)\n\tat ✽.Given luma application is launched(CustomerManagement.feature:5)\n",
-  "status": "failed"
+  "duration": 1535483771,
+  "status": "passed"
 });
 formatter.scenario({
-  "line": 19,
+  "line": 23,
   "name": "Change password",
   "description": "",
   "id": "customer-management;change-password;;2",
@@ -128,16 +151,42 @@ formatter.scenario({
 });
 formatter.step({
   "line": 9,
-  "name": "user on Edit Account information page",
+  "name": "user on login page",
   "keyword": "And "
 });
 formatter.step({
   "line": 10,
-  "name": "user click on change password",
+  "name": "user enter \"devondash01@yahoo.co.uk\" on login page",
+  "matchedColumns": [
+    3
+  ],
   "keyword": "When "
 });
 formatter.step({
   "line": 11,
+  "name": "user enters \"Monday02\" on login page",
+  "matchedColumns": [
+    4
+  ],
+  "keyword": "And "
+});
+formatter.step({
+  "line": 12,
+  "name": "user click Login",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 13,
+  "name": "user on Edit Account information page",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 14,
+  "name": "user click on change password",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
   "name": "user enter  \"Monday02\"",
   "matchedColumns": [
     0
@@ -145,7 +194,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
+  "line": 16,
   "name": "user enters \"Monday03\" on edit account information page",
   "matchedColumns": [
     1
@@ -153,7 +202,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 13,
+  "line": 17,
   "name": "users enter their \"Monday03\"",
   "matchedColumns": [
     2
@@ -161,14 +210,52 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 14,
+  "line": 18,
   "name": "user click save",
   "keyword": "And "
 });
 formatter.step({
-  "line": 15,
+  "line": 19,
   "name": "Account Dashboard should displayed with validation message \"You saved the account information\"",
   "keyword": "Then "
+});
+formatter.match({
+  "location": "AccountManagementSteps.userOnLoginPage()"
+});
+formatter.result({
+  "duration": 218088074,
+  "error_message": "java.lang.NullPointerException\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\n\tat com.sun.proxy.$Proxy18.click(Unknown Source)\n\tat com.lamtech.luma.pageObject.HomepagePO.clickSignInLink(HomepagePO.java:29)\n\tat com.lamtech.luma.stepDefinition.AccountManagementSteps.userOnLoginPage(AccountManagementSteps.java:97)\n\tat ✽.And user on login page(CustomerManagement.feature:9)\n",
+  "status": "failed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "devondash01@yahoo.co.uk",
+      "offset": 12
+    }
+  ],
+  "location": "AccountManagementSteps.userEnterOnLoginPage(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Monday02",
+      "offset": 13
+    }
+  ],
+  "location": "AccountManagementSteps.userEntersOnLoginPage(String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.match({
+  "location": "AccountManagementSteps.userClickLogin()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.match({
   "location": "CustomerManagementSteps.userOnEditAccountInformationPage()"

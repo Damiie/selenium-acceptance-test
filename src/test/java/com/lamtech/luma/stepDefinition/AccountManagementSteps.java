@@ -1,5 +1,6 @@
 package com.lamtech.luma.stepDefinition;
 
+import com.lamtech.luma.cucumber.Hooks;
 import com.lamtech.luma.pageObject.CreateAccountPagePO;
 import com.lamtech.luma.pageObject.HomepagePO;
 import com.lamtech.luma.pageObject.LoginPagePO;
@@ -15,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class AccountManagementSteps {
-    WebDriver driver;
+    WebDriver driver = Hooks.driver;
     //CreateAccountPagePO createAccountPagePO = new CreateAccountPagePO(driver);
 
     @Given("^luma application is launched$")
@@ -23,7 +24,7 @@ public class AccountManagementSteps {
         // Use Firefox broswer
         //WebDriverManager.firefoxdriver().setup();
         //driver = new FirefoxDriver();
-        driver.get("http://demo-magento2.vuestorefront.io/");
+        //driver.get("http://demo-magento2.vuestorefront.io/");
     }
 
     @And("^user on create an account page$")

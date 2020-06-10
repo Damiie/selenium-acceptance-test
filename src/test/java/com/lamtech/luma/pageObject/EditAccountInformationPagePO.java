@@ -12,8 +12,8 @@ public class EditAccountInformationPagePO {
     @FindBy(linkText = "Account Information")
     public static WebElement accountInformationLink;
 
-    @FindBy(css = "div.field:nth-child(7) > label:nth-child(2) > span:nth-child(1)")
-    public static WebElement changePasswordRadioDial;
+    @FindBy(id = "change-password")
+    public static WebElement changePasswordTickBox;
 
     @FindBy(id = "current-password")
     public static WebElement currentPasswordField;
@@ -34,20 +34,22 @@ public class EditAccountInformationPagePO {
 
     //Page specific method
 
-    public void clickAccountInformationLink(){accountInformationLink.click();}
-
-    public void clickChangePasswordRadioDial(){changePasswordRadioDial.click();}
-
-    public void enterCurrentPasswordField(String Currentpassword){
+    public void clickAccountInformationLink(){accountInformationLink.click();
+    }
+    public void clickChangePasswordTickBox(){changePasswordTickBox.click();
+    }
+    public void enterCurrentPassword(String Currentpassword){
         currentPasswordField.sendKeys(Currentpassword);
     }
-    public void enterNewPasswordFeild(String Newpassord){
-        newPasswordField.sendKeys(Newpassord);
+    public void enterNewPassword(String Newpassword){
+        newPasswordField.sendKeys(Newpassword);
     }
-    public  void enterPasswordConfirmationField(String ConfirmNewpassword){
+    public  void enterPasswordConfirmation(String ConfirmNewpassword){
         passwordConfirmationField.sendKeys(ConfirmNewpassword);
     }
+
     public void clickSaveButton(){clickSaveButton();}
+
 
     }
 

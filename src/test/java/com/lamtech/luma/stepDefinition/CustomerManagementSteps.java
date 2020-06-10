@@ -1,5 +1,7 @@
 package com.lamtech.luma.stepDefinition;
 
+import com.lamtech.luma.cucumber.Hooks;
+import com.lamtech.luma.pageObject.EditAccountInformationPagePO;
 import com.lamtech.luma.pageObject.HomepagePO;
 import com.lamtech.luma.pageObject.LoginPagePO;
 import cucumber.api.PendingException;
@@ -14,41 +16,54 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class CustomerManagementSteps {
 
-    WebDriver driver;
+    WebDriver driver = Hooks.driver;
 
 
     @And("^user on Edit Account information page$")
     public void userOnEditAccountInformationPage() {
-
-        driver.findElement(By.linkText("Account Information")).click();
-
+        //driver.findElement(By.linkText("Account Information")).click();
+        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
+        editAccountInformationPagePO.clickAccountInformationLink();
     }
 
     @When("^user click on change password$")
     public void userClickOnChangePassword() {
-        driver.findElement(By.cssSelector("div.field:nth-child(7)")).click();
+        //driver.findElement(By.cssSelector("div.field:nth-child(7)")).click();
+        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
+        editAccountInformationPagePO.clickChangePasswordTickBox();
     }
 
     @And("^user enter  \"([^\"]*)\"$")
     public void userEnter(String Currentpassword) throws Throwable {
-        driver.findElement(By.id("current-password")).sendKeys(Currentpassword);
+        //driver.findElement(By.id("current-password")).sendKeys(Currentpassword);
 
+        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
+        editAccountInformationPagePO.enterCurrentPassword(Currentpassword);
     }
 
     @And("^user enters \"([^\"]*)\" on edit account information page$")
     public void userEntersOnEditAccountInformationPage(String Newpassword) throws Throwable {
-        driver.findElement(By.id("password")).sendKeys(Newpassword);
+        //driver.findElement(By.id("password")).sendKeys(Newpassword);
 
+        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
+        editAccountInformationPagePO.enterCurrentPassword(Newpassword);
     }
 
     @And("^users enter their \"([^\"]*)\"$")
     public void usersEnterTheir(String ConfirmNewpassword) throws Throwable {
-        driver.findElement(By.id("password-confirmation")).sendKeys(ConfirmNewpassword);
+        //driver.findElement(By.id("password-confirmation")).sendKeys(ConfirmNewpassword);
+
+        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
+        editAccountInformationPagePO.enterPasswordConfirmation(ConfirmNewpassword);
     }
 
     @And("^user click save$")
     public void userClickSave() {
-        driver.findElement(By.cssSelector(".save > span:nth-child(1)")).click();
+        //driver.findElement(By.cssSelector(".save > span:nth-child(1)")).click();
+
+        EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
+        editAccountInformationPagePO.clickSaveButton();
+
     }
 
     @Then("^Account Dashboard should displayed with validation message \"([^\"]*)\"$")
