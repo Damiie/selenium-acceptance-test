@@ -37,6 +37,16 @@ public class LoginPagePO {
         SignInButton.click();
     }
 
+    public void userLogin(String Email, String Password){
+
+        emailField.sendKeys(Email);
+        passwordField.sendKeys(Password);
+        SignInButton.click();
+
+
+
+    }
+
 
 
 

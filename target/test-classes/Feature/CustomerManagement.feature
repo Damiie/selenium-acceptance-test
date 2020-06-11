@@ -7,9 +7,10 @@ Feature: Customer Management
   @changePassword
   Scenario Outline: Change password
     And user on login page
-    When user enter "<Email>" on login page
-    And user enters "<Password>" on login page
-    And user click Login
+    When user login with their "<Email>" and "<Password>"
+#    When user enter "<Email>" on login page
+#    And user enters "<Password>" on login page
+#    And user click Login
     And user on Edit Account information page
     When user click on change password
     And user enter  "<Currentpassword>"
@@ -20,5 +21,5 @@ Feature: Customer Management
 
     Examples:
       | Currentpassword | Newpassword | ConfirmNewpassword | Email                   | Password |
-      | Monday05        | Monday03    | Monday03           | devondash01@yahoo.co.uk | Monday05 |
+      | Monday03        | Monday04    | Monday04           | devondash01@yahoo.co.uk | Monday03 |
 

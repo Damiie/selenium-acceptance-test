@@ -10,9 +10,12 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.rules.Timeout;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.concurrent.TimeUnit;
 
 public class CustomerManagementSteps {
 
@@ -24,6 +27,9 @@ public class CustomerManagementSteps {
         //driver.findElement(By.linkText("Account Information")).click();
         EditAccountInformationPagePO editAccountInformationPagePO = new EditAccountInformationPagePO(driver);
         editAccountInformationPagePO.clickAccountInformationLink();
+
+        //implicit wait
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @When("^user click on change password$")
@@ -73,5 +79,10 @@ public class CustomerManagementSteps {
     }
 
 
+    @When("^user login with their \"([^\"]*)\" and \"([^\"]*)\"$")
+    public void userLoginWithTheirAnd(String Email, String Password) throws Throwable {
+        LoginPagePO loginPagePO = new LoginPagePO(driver);
+        loginPagePO.userLogin(Email, Password);
 
+    }
 }
