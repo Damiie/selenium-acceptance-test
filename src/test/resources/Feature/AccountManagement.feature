@@ -27,4 +27,4 @@ Feature: Account Management
     Then My account dashboard is displayed
     Examples:
       | Email                   | Password |
-      | devondash01@yahoo.co.uk | Monday02 |
+      | devondash01@yahoo.co.uk | Monday03 |

@@ -43,8 +43,6 @@ public class EditAccountInformationPagePO {
     //Page specific method
 
     public void clickAccountInformationLink(){
-        //wait.until(ExpectedConditions.elementToBeClickable(accountInformationLink));
-        //wait.until(ExpectedConditions.elementToBeClickable(accountInformationLink));
 
         wait.until(ExpectedConditions.elementToBeClickable(accountInformationLink));
 

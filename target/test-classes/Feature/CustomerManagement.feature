@@ -21,5 +21,5 @@ Feature: Customer Management
 
     Examples:
       | Currentpassword | Newpassword | ConfirmNewpassword | Email                   | Password |
-      | Monday04        | Monday03    | Monday03           | devondash01@yahoo.co.uk | Monday04 |
+      | Monday03       | Monday00    | Monday00           | devondash01@yahoo.co.uk | Monday03 |
 
